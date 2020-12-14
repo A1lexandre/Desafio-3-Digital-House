@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Marvel Api</string>
+    <string name="app_label">MARVEL</string>
+    <string name="email_hint">Email</string>
+</resources>
