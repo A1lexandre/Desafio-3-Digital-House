@@ -2,6 +2,8 @@
     <string name="app_name">Marvel Api</string>
     <string name="app_label">MARVEL</string>
     <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="name_hint">Name</string>
     <string name="login_card_welcome">Welcome to the Marvel HQ\'s</string>
     <string name="remember_check_label">Remember</string>
     <string name="login_button_text">LOG IN</string>

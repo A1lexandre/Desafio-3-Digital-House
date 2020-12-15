@@ -12,13 +12,33 @@ tools:context=".CreateAccountActivity">
         style="@style/customToolBar"
         />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:elevation="2dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/add_user_image"
+        android:layout_centerHorizontal="true"
+        />
+
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMainCard"
         android:layout_width="match_parent"
         android:layout_height="430dp"
-        android:layout_margin="20dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         app:cardCornerRadius="15dp"
         app:cardBackgroundColor="@color/primary_red"
-        android:layout_gravity="center">
+        android:layout_centerInParent="true">
 
 
         <com.google.android.material.card.MaterialCardView
@@ -37,8 +57,8 @@ tools:context=".CreateAccountActivity">
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:hint="@string/email_hint"
-                    android:textColorHint="@color/primary_red"
+                    android:hint="@string/name_hint"
+
                     app:boxBackgroundColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +78,6 @@ tools:context=".CreateAccountActivity">
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:hint="@string/email_hint"
-                    android:textColorHint="@color/primary_red"
                     app:boxBackgroundColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -77,8 +96,7 @@ tools:context=".CreateAccountActivity">
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:hint="@string/email_hint"
-                    android:textColorHint="@color/primary_red"
+                    android:hint="@string/password_hint"
                     app:boxBackgroundColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -111,6 +129,6 @@ tools:context=".CreateAccountActivity">
 
     </com.google.android.material.card.MaterialCardView>
 
-
+    </RelativeLayout>
 
 </FrameLayout>
