@@ -1,9 +1,10 @@
-package com.android.marvelapi
+package com.android.marvelapi.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.android.marvelapi.R
 import com.android.marvelapi.databinding.ActivityCreateAccountBinding
 
 class CreateAccountActivity : AppCompatActivity() {

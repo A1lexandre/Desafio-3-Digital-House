@@ -1,9 +1,10 @@
-package com.android.marvelapi
+package com.android.marvelapi.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.ViewModelProvider
+import com.android.marvelapi.R
 import com.android.marvelapi.viewmodel.ComicsViewModel
 
 class ComicsListActivity : AppCompatActivity() {
