@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.marvelapi.databinding.ComicListItemBinding
 import com.android.marvelapi.model.MarvelComic
+import com.bumptech.glide.Glide
 
 class ComicListAdapter(val listOfComics: List<MarvelComic>): RecyclerView.Adapter<ComicListAdapter.ViewHolder>() {
 
@@ -21,7 +22,7 @@ class ComicListAdapter(val listOfComics: List<MarvelComic>): RecyclerView.Adapte
 
     inner class ViewHolder(val view: ComicListItemBinding): RecyclerView.ViewHolder(view.root) {
         fun bind(comic: MarvelComic) = with(view) {
-           // Glide.with(view.root.context).load()
+            Glide.with(view.root.context).load(comic.thumbnail.path).into(imComicCover)
         }
     }
 }
