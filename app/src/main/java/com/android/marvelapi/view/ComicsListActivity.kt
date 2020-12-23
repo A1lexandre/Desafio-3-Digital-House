@@ -20,7 +20,7 @@ class ComicsListActivity : AppCompatActivity() {
         viewmodel.getMarvelComics()
 
         viewmodel.onResultMarvelComics.observe(this, {
-            Log.i("Comics", it.comicData.marvelComics.size.toString())
+            Log.i("ComicsPath", it.comicData.marvelComics[0].thumbnail.path)
         })
 
         viewmodel.onError.observe(this, {

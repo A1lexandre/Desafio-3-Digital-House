@@ -10,5 +10,6 @@ class Constants {
         const val NUMBER_OF_COMICS = 20
         const val TIMESTAMP = "ts"
         const val HASH = "hash"
+        const val LARGE_IMAGE = "portrait_xlarge"
     }
 }
