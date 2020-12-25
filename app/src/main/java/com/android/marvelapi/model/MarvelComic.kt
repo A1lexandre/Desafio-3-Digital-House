@@ -9,6 +9,7 @@ data class MarvelComic(
     val format: String,
     val id: String,
     val images: List<Image>,
+    val series: Serie,
     val isbn: String,
     val issn: String,
     val issueNumber: String,

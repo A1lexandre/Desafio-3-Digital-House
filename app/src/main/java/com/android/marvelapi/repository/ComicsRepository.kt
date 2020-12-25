@@ -8,7 +8,8 @@ class ComicsRepository {
 
     suspend fun getComics(numberOfComics: Int): ResponseApi {
         return try {
-            val response = MarvelApiService.marvelAPI.getComics(NUMBER_OF_COMICS)
+            val response = MarvelApiService.marvelAPI.getComics(NUMBER_OF_COMICS, 2069, "issueNumber", true, )
+//            val response = MarvelApiService.marvelAPI.getComics(NUMBER_OF_COMICS, 2050, "issueNumber")
 
             if (response.isSuccessful) {
                 ResponseApi.Success(response.body())

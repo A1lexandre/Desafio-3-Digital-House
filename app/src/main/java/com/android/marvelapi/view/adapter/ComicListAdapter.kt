@@ -23,6 +23,7 @@ class ComicListAdapter(val listOfComics: List<MarvelComic>): RecyclerView.Adapte
     inner class ViewHolder(val view: ComicListItemBinding): RecyclerView.ViewHolder(view.root) {
         fun bind(comic: MarvelComic) = with(view) {
             Glide.with(view.root.context).load(comic.thumbnail.path).into(imComicCover)
+            tvEdition.text = "#${comic.issueNumber}"
         }
     }
 }

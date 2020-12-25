@@ -10,6 +10,9 @@ interface MarvelAPI {
 
     @GET("comics")
     suspend fun getComics(
-        @Query("limit") numberOfComics: Int
+        @Query("limit") numberOfComics: Int,
+        @Query("series") series: Int,
+        @Query("orderBy") orderBy: String,
+        @Query("hasDigitalIssue") digitalIssue: Boolean
     ): Response<MarvelResponse>
 }
