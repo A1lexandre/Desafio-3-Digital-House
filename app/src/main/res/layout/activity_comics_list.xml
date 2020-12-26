@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".view.ComicsListActivity">
 
+    <include
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading_layout"
+        android:layout_below="@id/imToolBar"
+        />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imToolBar"
         android:layout_width="match_parent"

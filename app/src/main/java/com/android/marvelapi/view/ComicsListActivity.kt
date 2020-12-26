@@ -3,6 +3,7 @@ package com.android.marvelapi.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.android.marvelapi.R
@@ -25,6 +26,7 @@ class ComicsListActivity : AppCompatActivity() {
         viewmodel.getMarvelComics()
 
         viewmodel.onResultMarvelComics.observe(this, {
+            binding.loadingView.root.visibility = View.GONE
             binding.rvComicList.apply {
                 layoutManager = GridLayoutManager(this@ComicsListActivity, 3)
                 adapter = ComicListAdapter(it.comicData.marvelComics)
