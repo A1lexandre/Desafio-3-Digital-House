@@ -1,5 +1,9 @@
 package com.android.marvelapi.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class MarvelComic(
     val dates: List<Date>,
     val description: String,
@@ -20,4 +24,4 @@ data class MarvelComic(
     val title: String,
     val upc: String,
     val variantDescription: String
-)
+): Parcelable

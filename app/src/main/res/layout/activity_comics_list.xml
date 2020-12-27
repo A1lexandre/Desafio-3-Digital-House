@@ -21,6 +21,12 @@
         style="@style/customToolBar"
       />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/marvel_logo_name"
+        android:textColor="@color/white"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvComicList"
         android:layout_width="match_parent"

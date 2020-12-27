@@ -12,4 +12,8 @@ class Constants {
         const val HASH = "hash"
         const val LARGE_IMAGE = "portrait_xlarge"
     }
+
+    object Comic {
+        const val COMIC = "comic"
+    }
 }
