@@ -19,6 +19,8 @@ class CreateAccountActivity : AppCompatActivity() {
 
         binding.btnSave.setOnClickListener {
             startActivity(Intent(this, ComicsListActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            super.finish()
         }
 
     }
