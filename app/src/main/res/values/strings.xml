@@ -12,4 +12,7 @@
     <string name="save_button_text">SAVE</string>
     <string name="register_action_bar_label">Register</string>
     <string name="marvel_logo_name">MARVEL</string>
+    <string name="published_label">Published</string>
+    <string name="price_label">Price</string>
+    <string name="pages_label">Pages</string>
 </resources>

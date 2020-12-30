@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:text="@string/marvel_logo_name"
         android:textSize="40sp"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:layout_margin="15dp"
         android:fontFamily="@font/bebas_neue_regular"/>
