@@ -18,6 +18,9 @@ class ComicsBusiness {
                 val comics = response.data as MarvelResponse
                 comics.comicData.marvelComics.forEach {
                     it.thumbnail.path = "${it.thumbnail.path}/${LARGE_IMAGE}.${it.thumbnail.extension}"
+                    it.images.forEach { image ->
+                        image.path = "${image.path}/${LARGE_IMAGE}.${image.extension}"
+                    }
                 }
                 ResponseApi.Success(response.data)}
             is ResponseApi.Error -> response

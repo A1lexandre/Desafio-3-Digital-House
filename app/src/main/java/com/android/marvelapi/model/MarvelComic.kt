@@ -23,5 +23,5 @@ data class MarvelComic(
     val thumbnail: Thumbnail,
     val title: String,
     val upc: String,
-    val variantDescription: String
+    val variantDescription: String,
 ): Parcelable
