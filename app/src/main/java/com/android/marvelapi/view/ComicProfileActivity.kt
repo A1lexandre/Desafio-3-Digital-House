@@ -1,17 +1,18 @@
 package com.android.marvelapi.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
+import androidx.core.view.ViewCompat
 import com.android.marvelapi.R
 import com.android.marvelapi.databinding.ActivityComicProfileBinding
 import com.android.marvelapi.model.MarvelComic
 import com.android.marvelapi.utils.Constants.Comic.COMIC
 import com.bumptech.glide.Glide
-import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.util.*
 
 class ComicProfileActivity : AppCompatActivity() {
@@ -30,14 +31,20 @@ class ComicProfileActivity : AppCompatActivity() {
     }
 
     private fun setupComicInformation(comic: MarvelComic?) {
-        comic?.let {
+        comic?.let { marvelComic ->
             with(binding) {
-                Glide.with(this@ComicProfileActivity).load(it.thumbnail.path).into(imCover)
-                tvTitle.text = it.title
-                tvDescription.text = it.description
-                tvPubDate.text = getDate(it.dates[0].date)
-                tvPrice.text = if(it.prices.size > 1) it.prices[1].price else it.prices.first().price
-                tvPages.text = if(it.pageCount=="0") "Not specified" else it.pageCount
+                Glide.with(this@ComicProfileActivity).load(marvelComic.thumbnail.path).into(imCover)
+                imCover.setOnClickListener { _ ->
+                    val intent = Intent(this@ComicProfileActivity, ComicProfilePicActivity::class.java)
+                    intent.putExtra("profilePicPath", marvelComic.thumbnail.path)
+                    val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@ComicProfileActivity, imCover, ViewCompat.getTransitionName(imCover) ?: "")
+                    startActivity(intent, options.toBundle())
+                }
+                tvTitle.text = marvelComic.title
+                tvDescription.text = marvelComic.description
+                tvPubDate.text = getDate(marvelComic.dates[0].date)
+                tvPrice.text = if(marvelComic.prices.size > 1) marvelComic.prices[1].price else marvelComic.prices.first().price
+                tvPages.text = if(marvelComic.pageCount=="0") "Not specified" else marvelComic.pageCount
             }
         }
     }
@@ -53,7 +60,7 @@ class ComicProfileActivity : AppCompatActivity() {
 
         cal.time = dat
 
-        return "${dayOfMonth.get(cal.get(Calendar.MONTH))}, ${cal.get(Calendar.YEAR)}"
+        return "${dayOfMonth[cal.get(Calendar.MONTH)]}, ${cal.get(Calendar.YEAR)}"
     }
 
     override fun finish() {

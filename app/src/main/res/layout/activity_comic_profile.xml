@@ -16,6 +16,7 @@
             android:layout_height="280dp"
             android:src="@color/black"
             android:scaleType="centerCrop"
+            android:transitionName="transitionProfilePic"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -61,6 +62,7 @@
             android:id="@+id/imCover"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="fitXY"
             tools:src="@color/blue_text" />
 
         </com.google.android.material.card.MaterialCardView>

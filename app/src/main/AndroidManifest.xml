@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApi"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.ComicProfileActivity"></activity>
+        <activity android:name=".view.ComicProfilePicActivity"></activity>
+        <activity android:name=".view.ComicProfileActivity" />
         <activity android:name=".view.ComicsListActivity" />
         <activity android:name=".view.CreateAccountActivity" />
         <activity android:name=".view.LoginActivity">

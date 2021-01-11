@@ -10,7 +10,8 @@ class Constants {
         const val NUMBER_OF_COMICS = 21
         const val TIMESTAMP = "ts"
         const val HASH = "hash"
-        const val LARGE_IMAGE = "portrait_xlarge"
+        const val LARGE_FANTASTIC_IMAGE = "portrait_fantastic"
+        const val LARGE_UNCANNY  = "portrait_uncanny"
     }
 
     object Comic {

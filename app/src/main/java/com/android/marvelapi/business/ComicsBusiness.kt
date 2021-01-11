@@ -3,7 +3,8 @@ package com.android.marvelapi.business
 import com.android.marvelapi.api.ResponseApi
 import com.android.marvelapi.model.MarvelResponse
 import com.android.marvelapi.repository.ComicsRepository
-import com.android.marvelapi.utils.Constants.Api.LARGE_IMAGE
+import com.android.marvelapi.utils.Constants.Api.LARGE_FANTASTIC_IMAGE
+import com.android.marvelapi.utils.Constants.Api.LARGE_UNCANNY
 
 class ComicsBusiness {
 
@@ -17,9 +18,9 @@ class ComicsBusiness {
             is ResponseApi.Success -> {
                 val comics = response.data as MarvelResponse
                 comics.comicData.marvelComics.forEach {
-                    it.thumbnail.path = "${it.thumbnail.path}/${LARGE_IMAGE}.${it.thumbnail.extension}"
+                    it.thumbnail.path = "${it.thumbnail.path}/${LARGE_UNCANNY}.${it.thumbnail.extension}"
                     it.images.forEach { image ->
-                        image.path = "${image.path}/${LARGE_IMAGE}.${image.extension}"
+                        image.path = "${image.path}/${LARGE_FANTASTIC_IMAGE}.${image.extension}"
                     }
                 }
                 ResponseApi.Success(response.data)}
