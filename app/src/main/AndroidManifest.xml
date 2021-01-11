@@ -12,17 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApi"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.ComicProfilePicActivity"></activity>
-        <activity android:name=".view.ComicProfileActivity" />
-        <activity android:name=".view.ComicsListActivity" />
-        <activity android:name=".view.CreateAccountActivity" />
-        <activity android:name=".view.LoginActivity">
+        <activity android:name=".view.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.ComicProfilePicActivity" />
+        <activity android:name=".view.ComicProfileActivity" />
+        <activity android:name=".view.ComicsListActivity" />
+        <activity android:name=".view.CreateAccountActivity" />
+        <activity android:name=".view.LoginActivity"/>
     </application>
 
 </manifest>
