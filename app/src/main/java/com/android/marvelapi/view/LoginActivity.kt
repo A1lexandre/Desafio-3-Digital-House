@@ -16,6 +16,11 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnLogin.setOnClickListener {
+            startActivity(Intent(this, ComicsListActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
         binding.btnCreateAccount.setOnClickListener {
             startActivity(Intent(this@LoginActivity, CreateAccountActivity::class.java))
             overridePendingTransition(R.anim.slide_in_up, R.anim.stay)
